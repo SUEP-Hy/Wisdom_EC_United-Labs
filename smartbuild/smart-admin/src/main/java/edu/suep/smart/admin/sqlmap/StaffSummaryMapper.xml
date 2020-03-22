@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.suep.smart.admin.dao.StaffSummaryMapper">
+
+  <resultMap id="BaseResultMap" type="edu.suep.smart.admin.model.StaffSummary">
+	<id column="id" jdbcType="BIGINT" property="id" />
+	<result column="basicid" jdbcType="INTEGER" property="basicid" />
+	<result column="contactid" jdbcType="INTEGER" property="contactid" />
+	<result column="payrollid" jdbcType="INTEGER" property="payrollid" />
+	<result column="pactid" jdbcType="INTEGER" property="pactid" />
+	<result column="protocolid" jdbcType="INTEGER" property="protocolid" />
+	<result column="experienceid" jdbcType="INTEGER" property="experienceid" />
+	<result column="physicalid" jdbcType="INTEGER" property="physicalid" />
+	<result column="familyid" jdbcType="INTEGER" property="familyid" />
+	<result column="residentid" jdbcType="INTEGER" property="residentid" />
+	<result column="trainid" jdbcType="INTEGER" property="trainid" />
+	<result column="inoutid" jdbcType="INTEGER" property="inoutid" />
+	<result column="biofeatureid" jdbcType="INTEGER" property="biofeatureid" />
+	<result column="dictionaryid" jdbcType="INTEGER" property="dictionaryid" />
+	<result column="create_by" jdbcType="VARCHAR" property="createBy" />
+	<result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+	<result column="last_update_by" jdbcType="VARCHAR" property="lastUpdateBy" />
+	<result column="last_update_time" jdbcType="TIMESTAMP" property="lastUpdateTime" />
+  </resultMap>
+  
+  <insert id="add" parameterType="edu.suep.smart.admin.model.StaffSummary">
+    insert into staff_summary
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="basicid != null">
+        basicid,
+      </if>
+      <if test="contactid != null">
+        contactid,
+      </if>
+      <if test="payrollid != null">
+        payrollid,
+      </if>
+      <if test="pactid != null">
+        pactid,
+      </if>
+      <if test="protocolid != null">
+        protocolid,
+      </if>
+      <if test="experienceid != null">
+        experienceid,
+      </if>
+      <if test="physicalid != null">
+        physicalid,
+      </if>
+      <if test="familyid != null">
+        familyid,
+      </if>
+      <if test="residentid != null">
+        residentid,
+      </if>
+      <if test="trainid != null">
+        trainid,
+      </if>
+      <if test="inoutid != null">
+        inoutid,
+      </if>
+      <if test="biofeatureid != null">
+        biofeatureid,
+      </if>
+      <if test="dictionaryid != null">
+        dictionaryid,
+      </if>
+      <if test="createBy != null">
+        create_by,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="lastUpdateBy != null">
+        last_update_by,
+      </if>
+      <if test="lastUpdateTime != null">
+        last_update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="basicid != null">
+        #{basicid,jdbcType=INTEGER},
+      </if>
+      <if test="contactid != null">
+        #{contactid,jdbcType=INTEGER},
+      </if>
+      <if test="payrollid != null">
+        #{payrollid,jdbcType=INTEGER},
+      </if>
+      <if test="pactid != null">
+        #{pactid,jdbcType=INTEGER},
+      </if>
+      <if test="protocolid != null">
+        #{protocolid,jdbcType=INTEGER},
+      </if>
+      <if test="experienceid != null">
+        #{experienceid,jdbcType=INTEGER},
+      </if>
+      <if test="physicalid != null">
+        #{physicalid,jdbcType=INTEGER},
+      </if>
+      <if test="familyid != null">
+        #{familyid,jdbcType=INTEGER},
+      </if>
+      <if test="residentid != null">
+        #{residentid,jdbcType=INTEGER},
+      </if>
+      <if test="trainid != null">
+        #{trainid,jdbcType=INTEGER},
+      </if>
+      <if test="inoutid != null">
+        #{inoutid,jdbcType=INTEGER},
+      </if>
+      <if test="biofeatureid != null">
+        #{biofeatureid,jdbcType=INTEGER},
+      </if>
+      <if test="dictionaryid != null">
+        #{dictionaryid,jdbcType=INTEGER},
+      </if>
+      <if test="createBy != null">
+        #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdateBy != null">
+        #{lastUpdateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="lastUpdateTime != null">
+        #{lastUpdateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+
+  <delete id="delete" parameterType="java.lang.Long">
+    delete from staff_summary
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  
+  <update id="update" parameterType="edu.suep.smart.admin.model.StaffSummary">
+    update staff_summary
+    <set>
+      <if test="id != null">
+        id = #{id,jdbcType=BIGINT},
+      </if>
+      <if test="basicid != null">
+        basicid = #{basicid,jdbcType=INTEGER},
+      </if>
+      <if test="contactid != null">
+        contactid = #{contactid,jdbcType=INTEGER},
+      </if>
+      <if test="payrollid != null">
+        payrollid = #{payrollid,jdbcType=INTEGER},
+      </if>
+      <if test="pactid != null">
+        pactid = #{pactid,jdbcType=INTEGER},
+      </if>
+      <if test="protocolid != null">
+        protocolid = #{protocolid,jdbcType=INTEGER},
+      </if>
+      <if test="experienceid != null">
+        experienceid = #{experienceid,jdbcType=INTEGER},
+      </if>
+      <if test="physicalid != null">
+        physicalid = #{physicalid,jdbcType=INTEGER},
+      </if>
+      <if test="familyid != null">
+        familyid = #{familyid,jdbcType=INTEGER},
+      </if>
+      <if test="residentid != null">
+        residentid = #{residentid,jdbcType=INTEGER},
+      </if>
+      <if test="trainid != null">
+        trainid = #{trainid,jdbcType=INTEGER},
+      </if>
+      <if test="inoutid != null">
+        inoutid = #{inoutid,jdbcType=INTEGER},
+      </if>
+      <if test="biofeatureid != null">
+        biofeatureid = #{biofeatureid,jdbcType=INTEGER},
+      </if>
+      <if test="dictionaryid != null">
+        dictionaryid = #{dictionaryid,jdbcType=INTEGER},
+      </if>
+      <if test="createBy != null">
+        create_by = #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdateBy != null">
+        last_update_by = #{lastUpdateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="lastUpdateTime != null">
+        last_update_time = #{lastUpdateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+  <select id="findById" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select * from staff_summary
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  
+  <select id="findPage" resultMap="BaseResultMap">
+    select * from staff_summary
+  </select>
+  
+</mapper>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.suep.smart.admin.dao.StaffContactMapper">
+
+  <resultMap id="BaseResultMap" type="edu.suep.smart.admin.model.StaffContact">
+	<id column="id" jdbcType="BIGINT" property="id" />
+	<result column="cellphone" jdbcType="VARCHAR" property="cellphone" />
+	<result column="email" jdbcType="VARCHAR" property="email" />
+	<result column="wechatnum" jdbcType="VARCHAR" property="wechatnum" />
+	<result column="officephone" jdbcType="VARCHAR" property="officephone" />
+	<result column="enterprisecornet" jdbcType="VARCHAR" property="enterprisecornet" />
+	<result column="nativeplace" jdbcType="VARCHAR" property="nativeplace" />
+	<result column="currentaddr" jdbcType="VARCHAR" property="currentaddr" />
+	<result column="zipcode" jdbcType="VARCHAR" property="zipcode" />
+	<result column="urgentcontact" jdbcType="VARCHAR" property="urgentcontact" />
+	<result column="relationship" jdbcType="VARCHAR" property="relationship" />
+	<result column="contactphone" jdbcType="VARCHAR" property="contactphone" />
+	<result column="create_by" jdbcType="VARCHAR" property="createBy" />
+	<result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+	<result column="last_update_by" jdbcType="VARCHAR" property="lastUpdateBy" />
+	<result column="last_update_time" jdbcType="TIMESTAMP" property="lastUpdateTime" />
+  </resultMap>
+  
+  <insert id="add" parameterType="edu.suep.smart.admin.model.StaffContact">
+    insert into staff_contact
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="cellphone != null">
+        cellphone,
+      </if>
+      <if test="email != null">
+        email,
+      </if>
+      <if test="wechatnum != null">
+        wechatnum,
+      </if>
+      <if test="officephone != null">
+        officephone,
+      </if>
+      <if test="enterprisecornet != null">
+        enterprisecornet,
+      </if>
+      <if test="nativeplace != null">
+        nativeplace,
+      </if>
+      <if test="currentaddr != null">
+        currentaddr,
+      </if>
+      <if test="zipcode != null">
+        zipcode,
+      </if>
+      <if test="urgentcontact != null">
+        urgentcontact,
+      </if>
+      <if test="relationship != null">
+        relationship,
+      </if>
+      <if test="contactphone != null">
+        contactphone,
+      </if>
+      <if test="createBy != null">
+        create_by,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="lastUpdateBy != null">
+        last_update_by,
+      </if>
+      <if test="lastUpdateTime != null">
+        last_update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="cellphone != null">
+        #{cellphone,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="wechatnum != null">
+        #{wechatnum,jdbcType=VARCHAR},
+      </if>
+      <if test="officephone != null">
+        #{officephone,jdbcType=VARCHAR},
+      </if>
+      <if test="enterprisecornet != null">
+        #{enterprisecornet,jdbcType=VARCHAR},
+      </if>
+      <if test="nativeplace != null">
+        #{nativeplace,jdbcType=VARCHAR},
+      </if>
+      <if test="currentaddr != null">
+        #{currentaddr,jdbcType=VARCHAR},
+      </if>
+      <if test="zipcode != null">
+        #{zipcode,jdbcType=VARCHAR},
+      </if>
+      <if test="urgentcontact != null">
+        #{urgentcontact,jdbcType=VARCHAR},
+      </if>
+      <if test="relationship != null">
+        #{relationship,jdbcType=VARCHAR},
+      </if>
+      <if test="contactphone != null">
+        #{contactphone,jdbcType=VARCHAR},
+      </if>
+      <if test="createBy != null">
+        #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdateBy != null">
+        #{lastUpdateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="lastUpdateTime != null">
+        #{lastUpdateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+
+  <delete id="delete" parameterType="java.lang.Long">
+    delete from staff_contact
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  
+  <update id="update" parameterType="edu.suep.smart.admin.model.StaffContact">
+    update staff_contact
+    <set>
+      <if test="id != null">
+        id = #{id,jdbcType=BIGINT},
+      </if>
+      <if test="cellphone != null">
+        cellphone = #{cellphone,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="wechatnum != null">
+        wechatnum = #{wechatnum,jdbcType=VARCHAR},
+      </if>
+      <if test="officephone != null">
+        officephone = #{officephone,jdbcType=VARCHAR},
+      </if>
+      <if test="enterprisecornet != null">
+        enterprisecornet = #{enterprisecornet,jdbcType=VARCHAR},
+      </if>
+      <if test="nativeplace != null">
+        nativeplace = #{nativeplace,jdbcType=VARCHAR},
+      </if>
+      <if test="currentaddr != null">
+        currentaddr = #{currentaddr,jdbcType=VARCHAR},
+      </if>
+      <if test="zipcode != null">
+        zipcode = #{zipcode,jdbcType=VARCHAR},
+      </if>
+      <if test="urgentcontact != null">
+        urgentcontact = #{urgentcontact,jdbcType=VARCHAR},
+      </if>
+      <if test="relationship != null">
+        relationship = #{relationship,jdbcType=VARCHAR},
+      </if>
+      <if test="contactphone != null">
+        contactphone = #{contactphone,jdbcType=VARCHAR},
+      </if>
+      <if test="createBy != null">
+        create_by = #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdateBy != null">
+        last_update_by = #{lastUpdateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="lastUpdateTime != null">
+        last_update_time = #{lastUpdateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+  <select id="findById" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select * from staff_contact
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  
+  <select id="findPage" resultMap="BaseResultMap">
+    select * from staff_contact
+  </select>
+  
+</mapper>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.suep.smart.admin.dao.StaffFamilyMapper">
+
+  <resultMap id="BaseResultMap" type="edu.suep.smart.admin.model.StaffFamily">
+	<id column="id" jdbcType="BIGINT" property="id" />
+	<result column="relationship" jdbcType="VARCHAR" property="relationship" />
+	<result column="name" jdbcType="VARCHAR" property="name" />
+	<result column="workunits" jdbcType="VARCHAR" property="workunits" />
+	<result column="postoffice" jdbcType="VARCHAR" property="postoffice" />
+	<result column="contactaddr" jdbcType="VARCHAR" property="contactaddr" />
+	<result column="contactnum" jdbcType="VARCHAR" property="contactnum" />
+	<result column="contactemail" jdbcType="VARCHAR" property="contactemail" />
+	<result column="age" jdbcType="INTEGER" property="age" />
+	<result column="birthday" jdbcType="DATE" property="birthday" />
+	<result column="create_by" jdbcType="VARCHAR" property="createBy" />
+	<result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+	<result column="last_update_by" jdbcType="VARCHAR" property="lastUpdateBy" />
+	<result column="last_update_time" jdbcType="TIMESTAMP" property="lastUpdateTime" />
+  </resultMap>
+  
+  <insert id="add" parameterType="edu.suep.smart.admin.model.StaffFamily">
+    insert into staff_family
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="relationship != null">
+        relationship,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="workunits != null">
+        workunits,
+      </if>
+      <if test="postoffice != null">
+        postoffice,
+      </if>
+      <if test="contactaddr != null">
+        contactaddr,
+      </if>
+      <if test="contactnum != null">
+        contactnum,
+      </if>
+      <if test="contactemail != null">
+        contactemail,
+      </if>
+      <if test="age != null">
+        age,
+      </if>
+      <if test="birthday != null">
+        birthday,
+      </if>
+      <if test="createBy != null">
+        create_by,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="lastUpdateBy != null">
+        last_update_by,
+      </if>
+      <if test="lastUpdateTime != null">
+        last_update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="relationship != null">
+        #{relationship,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="workunits != null">
+        #{workunits,jdbcType=VARCHAR},
+      </if>
+      <if test="postoffice != null">
+        #{postoffice,jdbcType=VARCHAR},
+      </if>
+      <if test="contactaddr != null">
+        #{contactaddr,jdbcType=VARCHAR},
+      </if>
+      <if test="contactnum != null">
+        #{contactnum,jdbcType=VARCHAR},
+      </if>
+      <if test="contactemail != null">
+        #{contactemail,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null">
+        #{age,jdbcType=INTEGER},
+      </if>
+      <if test="birthday != null">
+        #{birthday,jdbcType=DATE},
+      </if>
+      <if test="createBy != null">
+        #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdateBy != null">
+        #{lastUpdateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="lastUpdateTime != null">
+        #{lastUpdateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+
+  <delete id="delete" parameterType="java.lang.Long">
+    delete from staff_family
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  
+  <update id="update" parameterType="edu.suep.smart.admin.model.StaffFamily">
+    update staff_family
+    <set>
+      <if test="id != null">
+        id = #{id,jdbcType=BIGINT},
+      </if>
+      <if test="relationship != null">
+        relationship = #{relationship,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="workunits != null">
+        workunits = #{workunits,jdbcType=VARCHAR},
+      </if>
+      <if test="postoffice != null">
+        postoffice = #{postoffice,jdbcType=VARCHAR},
+      </if>
+      <if test="contactaddr != null">
+        contactaddr = #{contactaddr,jdbcType=VARCHAR},
+      </if>
+      <if test="contactnum != null">
+        contactnum = #{contactnum,jdbcType=VARCHAR},
+      </if>
+      <if test="contactemail != null">
+        contactemail = #{contactemail,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null">
+        age = #{age,jdbcType=INTEGER},
+      </if>
+      <if test="birthday != null">
+        birthday = #{birthday,jdbcType=DATE},
+      </if>
+      <if test="createBy != null">
+        create_by = #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdateBy != null">
+        last_update_by = #{lastUpdateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="lastUpdateTime != null">
+        last_update_time = #{lastUpdateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+  <select id="findById" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select * from staff_family
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  
+  <select id="findPage" resultMap="BaseResultMap">
+    select * from staff_family
+  </select>
+  
+</mapper>
