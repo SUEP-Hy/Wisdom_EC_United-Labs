@@ -80,13 +80,25 @@
 				<el-input v-model="dataForm.createBy" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="创建时间" prop="createTime"  >
-				<el-input v-model="dataForm.createTime" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataForm.createTime"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="更新人" prop="lastUpdateBy"  >
 				<el-input v-model="dataForm.lastUpdateBy" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="更新时间" prop="lastUpdateTime"  >
-				<el-input v-model="dataForm.lastUpdateTime" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataForm.lastUpdateTime"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 		</el-form>
 		<div slot="footer" class="dialog-footer">
@@ -101,7 +113,13 @@
 				<el-input v-model="dataFormInout.id" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="考勤时间" prop="attendancetime" >
-				<el-input v-model="dataFormInout.attendancetime" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormInout.attendancetime"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="考勤方向" prop="attendancedirection" >
 				<el-input v-model="dataFormInout.attendancedirection" auto-complete="off"></el-input>
@@ -116,13 +134,25 @@
 				<el-input v-model="dataFormInout.createBy" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="创建时间" prop="createTime" >
-				<el-input v-model="dataFormInout.createTime" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormInout.createTime"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="更新人" prop="lastUpdateBy" >
 				<el-input v-model="dataFormInout.lastUpdateBy" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="更新时间" prop="lastUpdateTime" >
-				<el-input v-model="dataFormInout.lastUpdateTime" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormInout.lastUpdateTime"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 		</el-form>
 		<div slot="footer" class="dialog-footer">
@@ -155,31 +185,67 @@
 				<el-input v-model="dataFormProtocol.code" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="签订日期" prop="signdate"  >
-				<el-input v-model="dataFormProtocol.signdate" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormProtocol.signdate"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="协议期限" prop="deadline"  >
 				<el-input v-model="dataFormProtocol.deadline" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="开始时间" prop="pstartdate"  >
-				<el-input v-model="dataFormProtocol.pstartdate" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormProtocol.pstartdate"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="结束时间" prop="penddate"  >
-				<el-input v-model="dataFormProtocol.penddate" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormProtocol.penddate"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="终止日期" prop="terminaldate"  >
-				<el-input v-model="dataFormProtocol.terminaldate" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormProtocol.terminaldate"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="创建人" prop="createBy"  >
 				<el-input v-model="dataFormProtocol.createBy" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="创建时间" prop="createTime"  >
-				<el-input v-model="dataFormProtocol.createTime" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormProtocol.createTime"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="更新人" prop="lastUpdateBy"  >
 				<el-input v-model="dataFormProtocol.lastUpdateBy" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="更新时间" prop="lastUpdateTime"  >
-				<el-input v-model="dataFormProtocol.lastUpdateTime" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormProtocol.lastUpdateTime"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 		</el-form>
 		<div slot="footer" class="dialog-footer">
@@ -275,19 +341,43 @@
 				<el-input v-model="dataFormBasic.workunit" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="出生日期" prop="birthday" >
-				<el-input v-model="dataFormBasic.birthday" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormBasic.birthday"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="年龄" prop="age" >
 				<el-input v-model="dataFormBasic.age" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="入职时间" prop="entry" >
-				<el-input v-model="dataFormBasic.entry" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormBasic.entry"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="转正日期" prop="regularization" >
-				<el-input v-model="dataFormBasic.regularization" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormBasic.regularization"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="毕业时间" prop="graduatation" >
-				<el-input v-model="dataFormBasic.graduatation" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormBasic.graduatation"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="社会工龄" prop="socialage" >
 				<el-input v-model="dataFormBasic.socialage" auto-complete="off"></el-input>
@@ -296,13 +386,25 @@
 				<el-input v-model="dataFormBasic.createBy" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="创建时间" prop="createTime" >
-				<el-input v-model="dataFormBasic.createTime" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormBasic.createTime"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="更新人" prop="lastUpdateBy" >
 				<el-input v-model="dataFormBasic.lastUpdateBy" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="更新时间" prop="lastUpdateTime" >
-				<el-input v-model="dataFormBasic.lastUpdateTime" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormBasic.lastUpdateTime"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 		</el-form>
 		<div slot="footer" class="dialog-footer">
@@ -353,13 +455,25 @@
 				<el-input v-model="dataFormContact.createBy" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="创建时间" prop="createTime"  >
-				<el-input v-model="dataFormContact.createTime" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormContact.createTime"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="更新人" prop="lastUpdateBy"  >
 				<el-input v-model="dataFormContact.lastUpdateBy" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="更新时间" prop="lastUpdateTime"  >
-				<el-input v-model="dataFormContact.lastUpdateTime" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormContact.lastUpdateTime"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 		</el-form>
 		<div slot="footer" class="dialog-footer">
@@ -386,13 +500,25 @@
 				<el-input v-model="dataFormBiofeature.createBy" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="创建时间" prop="createTime"  >
-				<el-input v-model="dataFormBiofeature.createTime" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormBiofeature.createTime"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="更新人" prop="lastUpdateBy"  >
 				<el-input v-model="dataFormBiofeature.lastUpdateBy" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="更新时间" prop="lastUpdateTime"  >
-				<el-input v-model="dataFormBiofeature.lastUpdateTime" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormBiofeature.lastUpdateTime"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 		</el-form>
 		<div slot="footer" class="dialog-footer">
@@ -422,22 +548,46 @@
 				<el-input v-model="dataFormExperience.witness" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="开始时间" prop="pstartdate"  >
-				<el-input v-model="dataFormExperience.pstartdate" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormExperience.pstartdate"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="结束时间" prop="penddate"  >
-				<el-input v-model="dataFormExperience.penddate" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormExperience.penddate"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="创建人" prop="createBy"  >
 				<el-input v-model="dataFormExperience.createBy" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="创建时间" prop="createTime"  >
-				<el-input v-model="dataFormExperience.createTime" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormExperience.createTime"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="更新人" prop="lastUpdateBy"  >
 				<el-input v-model="dataFormExperience.lastUpdateBy" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="更新时间" prop="lastUpdateTime"  >
-				<el-input v-model="dataFormExperience.lastUpdateTime" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormExperience.lastUpdateTime"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 		</el-form>
 		<div slot="footer" class="dialog-footer">
@@ -476,19 +626,37 @@
 				<el-input v-model="dataFormFamily.age" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="生日" prop="birthday" >
-				<el-input v-model="dataFormFamily.birthday" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormFamily.birthday"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="创建人" prop="createBy" >
 				<el-input v-model="dataFormFamily.createBy" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="创建时间" prop="createTime" >
-				<el-input v-model="dataFormFamily.createTime" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormFamily.createTime"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="更新人" prop="lastUpdateBy" >
 				<el-input v-model="dataFormFamily.lastUpdateBy" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="更新时间" prop="lastUpdateTime" >
-				<el-input v-model="dataFormFamily.lastUpdateTime" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormFamily.lastUpdateTime"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 		</el-form>
 		<div slot="footer" class="dialog-footer">
@@ -527,16 +695,40 @@
 				<el-input v-model="dataFormPact.dispatchagency" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="签订日期" prop="signdate"  >
-				<el-input v-model="dataFormPact.signdate" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormPact.signdate"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="试用开始日期" prop="pstartdate"  >
-				<el-input v-model="dataFormPact.pstartdate" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormPact.pstartdate"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="试用结束日期" prop="penddate"  >
-				<el-input v-model="dataFormPact.penddate" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormPact.penddate"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="转正日期" prop="regularizationdate"  >
-				<el-input v-model="dataFormPact.regularizationdate" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormPact.regularizationdate"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="合同类型" prop="type"  >
 				<el-input v-model="dataFormPact.type" auto-complete="off"></el-input>
@@ -548,13 +740,25 @@
 				<el-input v-model="dataFormPact.createBy" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="创建时间" prop="createTime"  >
-				<el-input v-model="dataFormPact.createTime" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormPact.createTime"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="更新人" prop="lastUpdateBy"  >
 				<el-input v-model="dataFormPact.lastUpdateBy" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="更新时间" prop="lastUpdateTime"  >
-				<el-input v-model="dataFormPact.lastUpdateTime" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormPact.lastUpdateTime"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 		</el-form>
 		<div slot="footer" class="dialog-footer">
@@ -593,10 +797,22 @@
 				<el-input v-model="dataFormPayroll.salaryregion" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="社保开始缴纳时间" prop="socialsecuritystartstime"  >
-				<el-input v-model="dataFormPayroll.socialsecuritystartstime" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormPayroll.socialsecuritystartstime"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="公积金开始缴纳时间" prop="reservebeginstime"  >
-				<el-input v-model="dataFormPayroll.reservebeginstime" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormPayroll.reservebeginstime"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="社保缴纳基数" prop="socialsecuritypaymentbase"  >
 				<el-input v-model="dataFormPayroll.socialsecuritypaymentbase" auto-complete="off"></el-input>
@@ -617,13 +833,25 @@
 				<el-input v-model="dataFormPayroll.createBy" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="创建时间" prop="createTime"  >
-				<el-input v-model="dataFormPayroll.createTime" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormPayroll.createTime"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="更新人" prop="lastUpdateBy"  >
 				<el-input v-model="dataFormPayroll.lastUpdateBy" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="更新时间" prop="lastUpdateTime"  >
-				<el-input v-model="dataFormPayroll.lastUpdateTime" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormPayroll.lastUpdateTime"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 		</el-form>
 		<div slot="footer" class="dialog-footer">
@@ -668,13 +896,25 @@
 				<el-input v-model="dataFormPhysical.createBy" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="创建时间" prop="createTime"  >
-				<el-input v-model="dataFormPhysical.createTime" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormPhysical.createTime"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="更新人" prop="lastUpdateBy"  >
 				<el-input v-model="dataFormPhysical.lastUpdateBy" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="更新时间" prop="lastUpdateTime"  >
-				<el-input v-model="dataFormPhysical.lastUpdateTime" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormPhysical.lastUpTime"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 		</el-form>
 		<div slot="footer" class="dialog-footer">
@@ -713,22 +953,46 @@
 				<el-input v-model="dataFormResident.currentaddr" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="迁入时间" prop="immigrationtime"  >
-				<el-input v-model="dataFormResident.immigrationtime" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormResident.immigrationtime"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="迁出时间" prop="emigrationtime"  >
-				<el-input v-model="dataFormResident.emigrationtime" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormPhysical.emigrationtime"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="创建人" prop="createBy"  >
 				<el-input v-model="dataFormResident.createBy" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="创建时间" prop="createTime"  >
-				<el-input v-model="dataFormResident.createTime" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormPhysical.createTime"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="更新人" prop="lastUpdateBy"  >
 				<el-input v-model="dataFormResident.lastUpdateBy" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="更新时间" prop="lastUpdateTime"  >
-				<el-input v-model="dataFormResident.lastUpdateTime" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormPhysical.lastUpdateTime"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 		</el-form>
 		<div slot="footer" class="dialog-footer">
@@ -743,10 +1007,22 @@
 				<el-input v-model="dataFormTrain.id" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="培训开始时间" prop="starttime"  >
-				<el-input v-model="dataFormTrain.starttime" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormTrain.starttime"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="培训结束时间" prop="endtime"  >
-				<el-input v-model="dataFormTrain.endtime" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormTrain.endtime"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="培训类型" prop="type"  >
 				<el-input v-model="dataFormTrain.type" auto-complete="off"></el-input>
@@ -755,13 +1031,25 @@
 				<el-input v-model="dataFormTrain.createBy" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="创建时间" prop="createTime"  >
-				<el-input v-model="dataFormTrain.createTime" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormTrain.createTime"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 			<el-form-item label="更新人" prop="lastUpdateBy"  >
 				<el-input v-model="dataFormTrain.lastUpdateBy" auto-complete="off"></el-input>
 			</el-form-item>
 			<el-form-item label="更新时间" prop="lastUpdateTime"  >
-				<el-input v-model="dataFormTrain.lastUpdateTime" auto-complete="off"></el-input>
+				<el-date-picker
+					v-model="dataFormTrain.lastUpdateTime"
+					type="datetime"
+					:default-time = "['0000:00:00','23:59:59']"
+					value-format="yyyy-MM-dd HH:mm:ss"
+					 auto-complete="off">
+    			</el-date-picker>
 			</el-form-item>
 		</el-form>
 		<div slot="footer" class="dialog-footer">
@@ -776,6 +1064,7 @@
 import KtTable from "@/views/Core/KtTable"
 import KtButton from "@/views/Core/KtButton"
 import { format } from "@/utils/datetime"
+import { formatout } from "@/utils/datetime"
 export default {
 	components:{
 			KtTable,
@@ -1086,6 +1375,12 @@ export default {
 			}
 			this.pageRequest.columnFilters = {label: {name:'label', value:this.filters.label}}
 			this.$api.staffSummary.findPage(this.pageRequest).then((res) => {
+				for(var i=0;i<res.data.totalSize;i++){
+					res.data.content[i].createTime = format(res.data.content[i].createTime);
+				}
+				for(var i=0;i<res.data.totalSize;i++){
+					res.data.content[i].lastUpdateTime = format(res.data.content[i].lastUpdateTime);
+				}
 				this.pageResult = res.data
 			}).then(data!=null?data.callback:'')
 		},
@@ -1138,14 +1433,14 @@ export default {
 				this.$api.staffSummary.findById(this.dataForm.inoutid).then((res) => {
 					if(res.code == 200) {
 							this.$message({ message: '查询成功', type: 'success' })
-							this.dataFormInout.attendancetime= res.data.attendancetime;
+							this.dataFormInout.attendancetime= format(res.data.attendancetime);
 							this.dataFormInout.attendancedirection= res.data.attendancedirection;
 							this.dataFormInout.device= res.data.device;
 							this.dataFormInout.site= res.data.site;
 							this.dataFormInout.createBy= res.data.createBy;
-							this.dataFormInout.createTime= res.data.createTime;
+							this.dataFormInout.createTime= format(res.data.createTime);
 							this.dataFormInout.lastUpdateBy= res.data.lastUpdateBy;
-							this.dataFormInout.lastUpdateTime= res.data.lastUpdateTime;
+							this.dataFormInout.lastUpdateTime= format(res.data.lastUpdateTime);
 					} else {
 							this.$message({message: '查询失败, ' + res.msg, type: 'error'})
 					}
@@ -1185,15 +1480,15 @@ export default {
 							this.dataFormProtocol.firstparty=res.data.firstparty;
 							this.dataFormProtocol.paccessory=res.data.paccessory;
 							this.dataFormProtocol.code=res.data.code;
-							this.dataFormProtocol.signdate=res.data.signdate;
-							this.dataFormProtocol.deadline=res.data.deadline;
-							this.dataFormProtocol.pstartdate=res.data.pstartdate;
-							this.dataFormProtocol.penddate=res.data.penddate;
-							this.dataFormProtocol.terminaldate=res.data.terminaldate;
+							this.dataFormProtocol.signdate=format(res.data.signdate);
+							this.dataFormProtocol.deadline=format(res.data.deadline);
+							this.dataFormProtocol.pstartdate=format(res.data.pstartdate);
+							this.dataFormProtocol.penddate=format(res.data.penddate);
+							this.dataFormProtocol.terminaldate=format(res.data.terminaldate);
 							this.dataFormProtocol.createBy=res.data.createBy;
-							this.dataFormProtocol.createTime=res.data.createTime;
+							this.dataFormProtocol.createTime=format(res.data.createTime);
 							this.dataFormProtocol.lastUpdateBy=res.data.lastUpdateBy;
-							this.dataFormProtocol.lastUpdateTime=res.data.lastUpdateTime;
+							this.dataFormProtocol.lastUpdateTime=format(res.data.lastUpdateTime);
 					} else {
 							this.$message({message: '查询失败, ' + res.msg, type: 'error'})
 					}
@@ -1276,16 +1571,16 @@ export default {
 							this.dataFormBasic.jobcategory=res.data.jobcategory;
 							this.dataFormBasic.worktype=res.data.worktype;
 							this.dataFormBasic.workunit=res.data.workunit;
-							this.dataFormBasic.birthday=res.data.birthday;
+							this.dataFormBasic.birthday=format(res.data.birthday);
 							this.dataFormBasic.age=res.data.age;
-							this.dataFormBasic.entry=res.data.entry;
+							this.dataFormBasic.entry=format(res.data.entry);
 							this.dataFormBasic.regularization=res.data.regularization;
-							this.dataFormBasic.graduatation=res.data.socialage;
+							this.dataFormBasic.graduatation=format(res.data.socialage);
 							this.dataFormBasic.socialage=res.data.socialage;
 							this.dataFormBasic.createBy=res.data.createBy;
-							this.dataFormBasic.createTime=res.data.createTime;
+							this.dataFormBasic.createTime=format(res.data.createTime);
 							this.dataFormBasic.lastUpdateBy=res.data.lastUpdateBy;
-							this.dataFormBasic.lastUpdateTime=res.data.lastUpdateTime;			
+							this.dataFormBasic.lastUpdateTime=format(res.data.lastUpdateTime);			
 					} else {
 							this.$message({message: '查询失败, ' + res.msg, type: 'error'})
 					}
@@ -1315,9 +1610,9 @@ export default {
 							this.dataFormBiofeature.name=res.data.name;
 							this.dataFormBiofeature.code=res.data.code;
 							this.dataFormBiofeature.createBy=res.data.createBy;
-							this.dataFormBiofeature.createTime=res.data.createTime;
+							this.dataFormBiofeature.createTime=format(res.data.createTime);
 							this.dataFormBiofeature.lastUpdateBy=res.data.lastUpdateBy;
-							this.dataFormBiofeature.lastUpdateTime=res.data.lastUpdateTime;
+							this.dataFormBiofeature.lastUpdateTime=format(res.data.lastUpdateTime);
 					} else {
 							this.$message({message: '查询失败, ' + res.msg, type: 'error'})
 					}
@@ -1352,12 +1647,12 @@ export default {
 							this.dataFormExperience.type=res.data.type;
 							this.dataFormExperience.describe=res.data.describe;
 							this.dataFormExperience.witness=res.data.witness;
-							this.dataFormExperience.pstartdate=res.data.pstartdate;
-							this.dataFormExperience.penddate=res.data.penddate;
+							this.dataFormExperience.pstartdate=format(res.data.pstartdate);
+							this.dataFormExperience.penddate=format(res.data.penddate);
 							this.dataFormExperience.createBy=res.data.createBy;
-							this.dataFormExperience.createTime=res.data.createTime;
+							this.dataFormExperience.createTime=format(res.data.createTime);
 							this.dataFormExperience.lastUpdateBy=res.data.lastUpdateBy;
-							this.dataFormExperience.lastUpdateTime=res.data.lastUpdateTime;
+							this.dataFormExperience.lastUpdateTime=format(res.data.lastUpdateTime);
 					} else {
 							this.$message({message: '查询失败, ' + res.msg, type: 'error'})
 					}
@@ -1397,11 +1692,11 @@ export default {
 							this.dataFormFamily.contactnum=res.data.contactnum;
 							this.dataFormFamily.contactemail=res.data.contactemail;
 							this.dataFormFamily.age=res.data.age;
-							this.dataFormFamily.birthday=res.data.birthday;
+							this.dataFormFamily.birthday=format(res.data.birthday);
 							this.dataFormFamily.createBy=res.data.createBy;
-							this.dataFormFamily.createTime=res.data.createTime;
+							this.dataFormFamily.createTime=format(res.data.createTime);
 							this.dataFormFamily.lastUpdateBy=res.data.lastUpdateBy;
-							this.dataFormFamily.lastUpdateTime=res.data.lastUpdateTime;
+							this.dataFormFamily.lastUpdateTime=format(res.data.lastUpdateTime);
 					} else {
 							this.$message({message: '查询失败, ' + res.msg, type: 'error'})
 					}
@@ -1446,16 +1741,16 @@ export default {
 							this.dataFormPact.workplace=res.data.workplace;
 							this.dataFormPact.workduties=res.data.workduties;
 							this.dataFormPact.dispatchagency=res.data.dispatchagency;
-							this.dataFormPact.signdate=res.data.signdate;
-							this.dataFormPact.pstartdate=res.data.pstartdate;
-							this.dataFormPact.penddate=res.data.penddate;
-							this.dataFormPact.regularizationdate=res.data.regularizationdate;
+							this.dataFormPact.signdate=format(res.data.signdate);
+							this.dataFormPact.pstartdate=format(res.data.pstartdate);
+							this.dataFormPact.penddate=format(res.data.penddate);
+							this.dataFormPact.regularizationdate=format(res.data.regularizationdate);
 							this.dataFormPact.type=res.data.periodtype;
 							this.dataFormPact.periodtype=res.data.periodtype;
 							this.dataFormPact.createBy=res.data.createBy;
-							this.dataFormPact.createTime=res.data.createTime;
+							this.dataFormPact.createTime=format(res.data.createTime);
 							this.dataFormPact.lastUpdateBy=res.data.lastUpdateBy;
-							this.dataFormPact.lastUpdateTime=res.data.lastUpdateTime;
+							this.dataFormPact.lastUpdateTime=format(res.data.lastUpdateTime);
 					} else {
 							this.$message({message: '查询失败, ' + res.msg, type: 'error'})
 					}
@@ -1501,17 +1796,17 @@ export default {
 							this.dataFormPayroll.paymenttype=res.data.paymenttype;
 							this.dataFormPayroll.bankaccount=res.data.bankaccount;
 							this.dataFormPayroll.salaryregion=res.data.salaryregion;
-							this.dataFormPayroll.socialsecuritystartstime=res.data.socialsecuritystartstime;
-							this.dataFormPayroll.reservebeginstime=res.data.reservebeginstime;
+							this.dataFormPayroll.socialsecuritystartstime=format(res.data.socialsecuritystartstime);
+							this.dataFormPayroll.reservebeginstime=format(res.data.reservebeginstime);
 							this.dataFormPayroll.socialsecuritypaymentbase=res.data.socialsecuritypaymentbase;
 							this.dataFormPayroll.reservepaymentbase=res.data.reservepaymentbase;
 							this.dataFormPayroll.annuitypaymentbase=res.data.annuitypaymentbase;
 							this.dataFormPayroll.paycurrency=res.data.paycurrency;
 							this.dataFormPayroll.paybank=res.data.paybank;
 							this.dataFormPayroll.createBy=res.data.createBy;
-							this.dataFormPayroll.createTime=res.data.createTime;
+							this.dataFormPayroll.createTime=format(res.data.createTime);
 							this.dataFormPayroll.lastUpdateBy=res.data.lastUpdateBy;
-							this.dataFormPayroll.lastUpdateTime=res.data.lastUpdateTime;
+							this.dataFormPayroll.lastUpdateTime=format(res.data.lastUpdateTime);
 					} else {
 							this.$message({message: '查询失败, ' + res.msg, type: 'error'})
 					}
@@ -1553,9 +1848,9 @@ export default {
 							this.dataFormPhysical.eyesightl=res.data.eyesightl;
 							this.dataFormPhysical.eyesightr=res.data.eyesightr;
 							this.dataFormPhysical.createBy=res.data.createBy;
-							this.dataFormPhysical.createTime=res.data.createTime;
+							this.dataFormPhysical.createTime=format(res.data.createTime);
 							this.dataFormPhysical.lastUpdateBy=res.data.lastUpdateBy;
-							this.dataFormPhysical.lastUpdateTime=res.data.lastUpdateTime;
+							this.dataFormPhysical.lastUpdateTime=format(res.data.lastUpdateTime);
 					} else {
 							this.$message({message: '查询失败, ' + res.msg, type: 'error'})
 					}
@@ -1596,12 +1891,12 @@ export default {
 							this.dataFormResident.immigrationaddr=res.data.immigrationaddr;
 							this.dataFormResident.emigrationtaddr=res.data.emigrationtaddr;
 							this.dataFormResident.currentaddr=res.data.currentaddr;
-							this.dataFormResident.immigrationtime=res.data.immigrationaddr;
-							this.dataFormResident.emigrationtime=res.data.emigrationtime;
+							this.dataFormResident.immigrationtime=format(res.data.immigrationaddr);
+							this.dataFormResident.emigrationtime=format(res.data.emigrationtime);
 							this.dataFormResident.createBy=res.data.createBy;
-							this.dataFormResident.createTime=res.data.createTime;
+							this.dataFormResident.createTime=format(res.data.createTime);
 							this.dataFormResident.lastUpdateBy=res.data.lastUpdateBy;
-							this.dataFormResident.lastUpdateTime=res.data.lastUpdateTime;
+							this.dataFormResident.lastUpdateTime=format(res.data.lastUpdateTime);
 					} else {
 							this.$message({message: '查询失败, ' + res.msg, type: 'error'})
 					}
@@ -1627,13 +1922,13 @@ export default {
 				this.$api.staffSummary.findById(this.dataForm.trainid).then((res) => {
 					if(res.code == 200) {
 							this.$message({ message: '查询成功', type: 'success' })
-							this.dataFormTrain.starttime=res.data.starttime;
-							this.dataFormTrain.endtime=res.data.endtime;
+							this.dataFormTrain.starttime=format(res.data.starttime);
+							this.dataFormTrain.endtime=format(res.data.endtime);
 							this.dataFormTrain.type=res.data.type;
 							this.dataFormTrain.createBy=res.data.createBy;
-							this.dataFormTrain.createTime=res.data.createTime;
+							this.dataFormTrain.createTime=format(res.data.createTime);
 							this.dataFormTrain.lastUpdateBy=res.data.lastUpdateBy;
-							this.dataFormTrain.lastUpdateTime=res.data.lastUpdateTime;
+							this.dataFormTrain.lastUpdateTime=format(res.data.lastUpdateTime);
 	
 					} else {
 							this.$message({message: '查询失败, ' + res.msg, type: 'error'})
@@ -1680,9 +1975,9 @@ export default {
 							this.dataFormContact.relationship=res.data.relationship;
 							this.dataFormContact.contactphone=res.data.contactphone;
 							this.dataFormContact.createBy=res.data.createBy;
-							this.dataFormContact.createTime=res.data.createTime;
+							this.dataFormContact.createTime=format(res.data.createTime);
 							this.dataFormContact.lastUpdateBy=res.data,lastUpdateBy;
-							this.dataFormContact.lastUpdateTime=res.data.lastUpdateTime;
+							this.dataFormContact.lastUpdateTime=format(res.data.lastUpdateTime);
 					} else {
 							this.$message({message: '查询失败, ' + res.msg, type: 'error'})
 					}
@@ -1774,6 +2069,10 @@ export default {
 					this.$confirm('确认提交吗？', '提示', {}).then(() => {
 						this.editLoading = true
 						let params = Object.assign({}, this.dataForm)
+
+						params.createTime =  formatout(params.createTime)   //格式转换
+						params.lastUpdateTime =  formatout(params.lastUpdateTime)   //格式转换
+
 						this.$api.staffSummary.save(params).then((res) => {
 							if(res.code == 200) {
 								this.$message({ message: '操作成功', type: 'success' })
@@ -1797,6 +2096,12 @@ export default {
 						this.$confirm('确认提交吗？', '提示', {}).then(() => {
 							this.editLoading = true
 							let params = Object.assign({}, this.dataFormInout)
+
+							params.createTime =  formatout(params.createTime)   //格式转换
+							params.lastUpdateTime =  formatout(params.lastUpdateTime)   //格式转换
+							params.attendancetime =  formatout(params.attendancetime)   //格式转换
+						
+
 							this.$api.staffInout.save(params).then((res) => {
 								if(res.code == 200) {
 									this.$message({ message: '操作成功', type: 'success' })
@@ -1818,6 +2123,11 @@ export default {
 						this.$confirm('确认提交吗？', '提示', {}).then(() => {
 							this.editLoading = true
 							let params = Object.assign({}, this.dataFormInout)
+
+							params.createTime =  formatout(params.createTime)   //格式转换
+							params.lastUpdateTime =  formatout(params.lastUpdateTime)   //格式转换
+							params.attendancetime =  formatout(params.attendancetime)   //格式转换
+
 							params.id = this.dataForm.inoutid
 							this.$api.staffInout.save(params).then((res) => {
 								if(res.code == 200) {
@@ -1844,6 +2154,16 @@ export default {
 						this.$confirm('确认提交吗？', '提示', {}).then(() => {
 							this.editLoading = true
 							let params = Object.assign({}, this.dataFormProtocol)
+
+							params.createTime =  formatout(params.createTime)   //格式转换
+							params.lastUpdateTime =  formatout(params.lastUpdateTime)   //格式转换
+							params.signdate =  formatout(params.signdate)   //格式转换
+							params.pstartdate =  formatout(params.pstartdate)   //格式转换
+							params.penddate =  formatout(params.penddate)   //格式转换
+							params.terminaldate =  formatout(params.terminaldate)   //格式转换
+							params.deadline =  formatout(params.deadline)   //格式转换
+							
+
 							this.$api.staffProtocol.save(params).then((res) => {
 								if(res.code == 200) {
 									this.$message({ message: '操作成功', type: 'success' })
@@ -1865,6 +2185,16 @@ export default {
 						this.$confirm('确认提交吗？', '提示', {}).then(() => {
 							this.editLoading = true
 							let params = Object.assign({}, this.dataFormProtocol)
+
+							params.createTime =  formatout(params.createTime)   //格式转换
+							params.lastUpdateTime =  formatout(params.lastUpdateTime)   //格式转换
+							params.signdate =  formatout(params.signdate)   //格式转换
+							params.pstartdate =  formatout(params.pstartdate)   //格式转换
+							params.penddate =  formatout(params.penddate)   //格式转换
+							params.terminaldate =  formatout(params.terminaldate)   //格式转换
+							params.deadline =  formatout(params.deadline)   //格式转换
+
+
 							params.id = this.dataForm.protocolid
 							this.$api.staffProtocol.save(params).then((res) => {
 								if(res.code == 200) {
@@ -1891,6 +2221,15 @@ export default {
 						this.$confirm('确认提交吗？', '提示', {}).then(() => {
 							this.editLoading = true
 							let params = Object.assign({}, this.dataFormBasic)
+
+							params.regularization =  formatout(params.regularization)
+							params.graduatation =  formatout(params.graduatation)
+							
+
+							params.birthday =  formatout(params.birthday)
+							params.entry =  formatout(params.entry)
+							params.createTime =  formatout(params.createTime)
+							params.lastUpdateTime =  formatout(params.lastUpdateTime)    //格式转换
 							this.$api.staffBasic.save(params).then((res) => {
 								if(res.code == 200) {
 									this.$message({ message: '操作成功', type: 'success' })
@@ -1912,6 +2251,14 @@ export default {
 						this.$confirm('确认提交吗？', '提示', {}).then(() => {
 							this.editLoading = true
 							let params = Object.assign({}, this.dataFormBasic)
+							params.regularization =  formatout(params.regularization)
+							params.graduatation =  formatout(params.graduatation)
+							
+
+							params.birthday =  formatout(params.birthday)
+							params.entry =  formatout(params.entry)
+							params.createTime =  formatout(params.createTime)
+							params.lastUpdateTime =  formatout(params.lastUpdateTime)    //格式转换
 							params.id = this.dataForm.basicid
 							this.$api.staffBasic.save(params).then((res) => {
 								if(res.code == 200) {
@@ -1938,6 +2285,9 @@ export default {
 						this.$confirm('确认提交吗？', '提示', {}).then(() => {
 							this.editLoading = true
 							let params = Object.assign({}, this.dataFormBiofeature)
+							
+							params.createTime =  formatout(params.createTime)
+							params.lastUpdateTime =  formatout(params.lastUpdateTime)    //格式转换
 							this.$api.staffBiofeature.save(params).then((res) => {
 								if(res.code == 200) {
 									this.$message({ message: '操作成功', type: 'success' })
@@ -1959,6 +2309,9 @@ export default {
 						this.$confirm('确认提交吗？', '提示', {}).then(() => {
 							this.editLoading = true
 							let params = Object.assign({}, this.dataFormBiofeature)
+							
+							params.createTime =  formatout(params.createTime)
+							params.lastUpdateTime =  formatout(params.lastUpdateTime)    //格式转换
 							params.id = this.dataForm.biofeatureid
 							this.$api.staffBiofeature.save(params).then((res) => {
 								if(res.code == 200) {
@@ -1985,6 +2338,10 @@ export default {
 						this.$confirm('确认提交吗？', '提示', {}).then(() => {
 							this.editLoading = true
 							let params = Object.assign({}, this.dataFormContact)
+
+							
+							params.createTime =  formatout(params.createTime)
+							params.lastUpdateTime =  formatout(params.lastUpdateTime)    //格式转换
 							this.$api.staffContact.save(params).then((res) => {
 								if(res.code == 200) {
 									this.$message({ message: '操作成功', type: 'success' })
@@ -2006,6 +2363,9 @@ export default {
 						this.$confirm('确认提交吗？', '提示', {}).then(() => {
 							this.editLoading = true
 							let params = Object.assign({}, this.dataFormContact)
+
+							params.createTime =  formatout(params.createTime)
+							params.lastUpdateTime =  formatout(params.lastUpdateTime)    //格式转换
 							params.id = this.dataForm.contactid
 							this.$api.staffContact.save(params).then((res) => {
 								if(res.code == 200) {
@@ -2032,6 +2392,10 @@ export default {
 						this.$confirm('确认提交吗？', '提示', {}).then(() => {
 							this.editLoading = true
 							let params = Object.assign({}, this.dataFormExperience)
+							params.pstartdate =  formatout(params.pstartdate)
+							params.penddate =  formatout(params.penddate)
+							params.createTime =  formatout(params.createTime)
+							params.lastUpdateTime =  formatout(params.lastUpdateTime)    //格式转换
 							this.$api.staffExperience.save(params).then((res) => {
 								if(res.code == 200) {
 									this.$message({ message: '操作成功', type: 'success' })
@@ -2053,6 +2417,11 @@ export default {
 						this.$confirm('确认提交吗？', '提示', {}).then(() => {
 							this.editLoading = true
 							let params = Object.assign({}, this.dataFormExperience)
+
+							params.pstartdate =  formatout(params.pstartdate)
+							params.penddate =  formatout(params.penddate)
+							params.createTime =  formatout(params.createTime)
+							params.lastUpdateTime =  formatout(params.lastUpdateTime)    //格式转换
 							params.id = this.dataForm.experienceid
 							this.$api.staffExperience.save(params).then((res) => {
 								if(res.code == 200) {
@@ -2079,6 +2448,10 @@ export default {
 						this.$confirm('确认提交吗？', '提示', {}).then(() => {
 							this.editLoading = true
 							let params = Object.assign({}, this.dataFormFamily)
+							params.birthday =  formatout(params.birthday)
+							
+							params.createTime =  formatout(params.createTime)
+							params.lastUpdateTime =  formatout(params.lastUpdateTime)    //格式转换
 							this.$api.staffFamily.save(params).then((res) => {
 								if(res.code == 200) {
 									this.$message({ message: '操作成功', type: 'success' })
@@ -2100,6 +2473,11 @@ export default {
 						this.$confirm('确认提交吗？', '提示', {}).then(() => {
 							this.editLoading = true
 							let params = Object.assign({}, this.dataFormFamily)
+
+							params.birthday =  formatout(params.birthday)
+							
+							params.createTime =  formatout(params.createTime)
+							params.lastUpdateTime =  formatout(params.lastUpdateTime)    //格式转换
 							params.id = this.dataForm.familyid
 							this.$api.staffFamily.save(params).then((res) => {
 								if(res.code == 200) {
@@ -2126,6 +2504,13 @@ export default {
 						this.$confirm('确认提交吗？', '提示', {}).then(() => {
 							this.editLoading = true
 							let params = Object.assign({}, this.dataFormPact)
+							params.penddate =  formatout(params.penddate)
+							params.regularizationdate =  formatout(params.regularizationdate)
+							
+							params.signdate =  formatout(params.signdate)
+							params.pstartdate =  formatout(params.pstartdate)
+							params.createTime =  formatout(params.createTime)
+							params.lastUpdateTime =  formatout(params.lastUpdateTime)    //格式转换
 							this.$api.staffPact.save(params).then((res) => {
 								if(res.code == 200) {
 									this.$message({ message: '操作成功', type: 'success' })
@@ -2147,6 +2532,14 @@ export default {
 						this.$confirm('确认提交吗？', '提示', {}).then(() => {
 							this.editLoading = true
 							let params = Object.assign({}, this.dataFormPact)
+							params.penddate =  formatout(params.penddate)
+							params.regularizationdate =  formatout(params.regularizationdate)
+							
+							params.signdate =  formatout(params.signdate)
+							params.pstartdate =  formatout(params.pstartdate)
+							params.createTime =  formatout(params.createTime)
+							params.lastUpdateTime =  formatout(params.lastUpdateTime)    //格式转换
+
 							params.id = this.dataForm.pactid
 							this.$api.staffPact.save(params).then((res) => {
 								if(res.code == 200) {
@@ -2173,6 +2566,12 @@ export default {
 						this.$confirm('确认提交吗？', '提示', {}).then(() => {
 							this.editLoading = true
 							let params = Object.assign({}, this.dataFormPayroll)
+
+							params.socialsecuritystartstime =  formatout(params.socialsecuritystartstime)
+							params.reservebeginstime =  formatout(params.reservebeginstime)
+							params.createTime =  formatout(params.createTime)
+							params.lastUpdateTime =  formatout(params.lastUpdateTime)    //格式转换
+
 							this.$api.staffPayroll.save(params).then((res) => {
 								if(res.code == 200) {
 									this.$message({ message: '操作成功', type: 'success' })
@@ -2194,6 +2593,12 @@ export default {
 						this.$confirm('确认提交吗？', '提示', {}).then(() => {
 							this.editLoading = true
 							let params = Object.assign({}, this.dataFormPayroll)
+
+							params.socialsecuritystartstime =  formatout(params.socialsecuritystartstime)
+							params.reservebeginstime =  formatout(params.reservebeginstime)
+							params.createTime =  formatout(params.createTime)
+							params.lastUpdateTime =  formatout(params.lastUpdateTime)    //格式转换
+
 							params.id = this.dataForm.payrollid
 							this.$api.staffPayroll.save(params).then((res) => {
 								if(res.code == 200) {
@@ -2220,6 +2625,9 @@ export default {
 						this.$confirm('确认提交吗？', '提示', {}).then(() => {
 							this.editLoading = true
 							let params = Object.assign({}, this.dataFormPhysical)
+							
+							params.createTime =  formatout(params.createTime)
+							params.lastUpdateTime =  formatout(params.lastUpdateTime)    //格式转换
 							this.$api.staffPhysical.save(params).then((res) => {
 								if(res.code == 200) {
 									this.$message({ message: '操作成功', type: 'success' })
@@ -2241,6 +2649,10 @@ export default {
 						this.$confirm('确认提交吗？', '提示', {}).then(() => {
 							this.editLoading = true
 							let params = Object.assign({}, this.dataFormPhysical)
+
+							
+							params.createTime =  formatout(params.createTime)
+							params.lastUpdateTime =  formatout(params.lastUpdateTime)    //格式转换
 							params.id = this.dataForm.physicalid
 							this.$api.staffPhysical.save(params).then((res) => {
 								if(res.code == 200) {
@@ -2267,6 +2679,12 @@ export default {
 						this.$confirm('确认提交吗？', '提示', {}).then(() => {
 							this.editLoading = true
 							let params = Object.assign({}, this.dataFormResident)
+
+							params.immigrationtime =  formatout(params.immigrationtime)
+							params.emigrationtime =  formatout(params.emigrationtime)
+							params.createTime =  formatout(params.createTime)
+							params.lastUpdateTime =  formatout(params.lastUpdateTime)    //格式转换
+
 							this.$api.staffResident.save(params).then((res) => {
 								if(res.code == 200) {
 									this.$message({ message: '操作成功', type: 'success' })
@@ -2288,6 +2706,12 @@ export default {
 						this.$confirm('确认提交吗？', '提示', {}).then(() => {
 							this.editLoading = true
 							let params = Object.assign({}, this.dataFormResident)
+
+							params.immigrationtime =  formatout(params.immigrationtime)
+							params.emigrationtime =  formatout(params.emigrationtime)
+							params.createTime =  formatout(params.createTime)
+							params.lastUpdateTime =  formatout(params.lastUpdateTime)    //格式转换
+
 							params.id = this.dataForm.residentid
 							this.$api.staffResident.save(params).then((res) => {
 								if(res.code == 200) {
@@ -2314,6 +2738,12 @@ export default {
 						this.$confirm('确认提交吗？', '提示', {}).then(() => {
 							this.editLoading = true
 							let params = Object.assign({}, this.dataFormTrain)
+
+							params.starttime =  formatout(params.starttime)
+							params.endtime =  formatout(params.endtime)
+							params.createTime =  formatout(params.createTime)
+							params.lastUpdateTime =  formatout(params.lastUpdateTime)    //格式转换
+
 							this.$api.staffTrain.save(params).then((res) => {
 								if(res.code == 200) {
 									this.$message({ message: '操作成功', type: 'success' })
@@ -2335,6 +2765,12 @@ export default {
 						this.$confirm('确认提交吗？', '提示', {}).then(() => {
 							this.editLoading = true
 							let params = Object.assign({}, this.dataFormTrain)
+
+							params.starttime =  formatout(params.starttime)
+							params.endtime =  formatout(params.endtime)
+							params.createTime =  formatout(params.createTime)
+							params.lastUpdateTime =  formatout(params.lastUpdateTime)    //格式转换
+
 							params.id = this.dataForm.trainid
 							this.$api.staffTrain.save(params).then((res) => {
 								if(res.code == 200) {
