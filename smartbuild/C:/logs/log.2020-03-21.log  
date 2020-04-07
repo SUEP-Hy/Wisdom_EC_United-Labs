@@ -1,6 +1,0 @@
-[2020-03-21 00:46:06,263]-[INFO]:Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@48c40605: startup date [Fri Mar 20 15:35:39 CST 2020]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@23941fb4   
- [2020-03-21 00:46:12,310]-[INFO]:I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {}->http://localhost:8500: The target server failed to respond   
- [2020-03-21 00:46:12,334]-[INFO]:I/O exception (java.net.SocketException) caught when processing request to {}->http://localhost:8500: Connection reset   
- [2020-03-21 00:46:13,511]-[INFO]:Retrying request to {}->http://localhost:8500   
- [2020-03-21 00:46:14,092]-[INFO]:Retrying request to {}->http://localhost:8500   
- 
