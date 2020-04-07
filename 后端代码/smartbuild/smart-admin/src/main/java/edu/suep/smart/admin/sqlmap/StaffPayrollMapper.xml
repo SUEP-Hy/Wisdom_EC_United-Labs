@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.suep.smart.admin.dao.StaffPayrollMapper">
+
+  <resultMap id="BaseResultMap" type="edu.suep.smart.admin.model.StaffPayroll">
+	<id column="id" jdbcType="BIGINT" property="id" />
+	<result column="staffid" jdbcType="BIGINT" property="staffid" />
+	<result column="medicalsecuritynum" jdbcType="VARCHAR" property="medicalsecuritynum" />
+	<result column="socialsecuritynum" jdbcType="VARCHAR" property="socialsecuritynum" />
+	<result column="accumulationfundaccount" jdbcType="VARCHAR" property="accumulationfundaccount" />
+	<result column="socialsecurityorganizationrelationship" jdbcType="VARCHAR" property="socialsecurityorganizationrelationship" />
+	<result column="socialsecuritylevel" jdbcType="VARCHAR" property="socialsecuritylevel" />
+	<result column="paymenttype" jdbcType="VARCHAR" property="paymenttype" />
+	<result column="bankaccount" jdbcType="VARCHAR" property="bankaccount" />
+	<result column="salaryregion" jdbcType="VARCHAR" property="salaryregion" />
+	<result column="socialsecuritystartstime" jdbcType="DATE" property="socialsecuritystartstime" />
+	<result column="reservebeginstime" jdbcType="DATE" property="reservebeginstime" />
+	<result column="socialsecuritypaymentbase" jdbcType="DOUBLE" property="socialsecuritypaymentbase" />
+	<result column="reservepaymentbase" jdbcType="DOUBLE" property="reservepaymentbase" />
+	<result column="annuitypaymentbase" jdbcType="DOUBLE" property="annuitypaymentbase" />
+	<result column="paycurrency" jdbcType="INTEGER" property="paycurrency" />
+	<result column="paybank" jdbcType="INTEGER" property="paybank" />
+	<result column="create_by" jdbcType="VARCHAR" property="createBy" />
+	<result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+	<result column="last_update_by" jdbcType="VARCHAR" property="lastUpdateBy" />
+	<result column="last_update_time" jdbcType="TIMESTAMP" property="lastUpdateTime" />
+  </resultMap>
+  
+  <insert id="add" parameterType="edu.suep.smart.admin.model.StaffPayroll">
+    insert into staff_payroll
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="staffid != null">
+        staffid,
+      </if>
+      <if test="medicalsecuritynum != null">
+        medicalsecuritynum,
+      </if>
+      <if test="socialsecuritynum != null">
+        socialsecuritynum,
+      </if>
+      <if test="accumulationfundaccount != null">
+        accumulationfundaccount,
+      </if>
+      <if test="socialsecurityorganizationrelationship != null">
+        socialsecurityorganizationrelationship,
+      </if>
+      <if test="socialsecuritylevel != null">
+        socialsecuritylevel,
+      </if>
+      <if test="paymenttype != null">
+        paymenttype,
+      </if>
+      <if test="bankaccount != null">
+        bankaccount,
+      </if>
+      <if test="salaryregion != null">
+        salaryregion,
+      </if>
+      <if test="socialsecuritystartstime != null">
+        socialsecuritystartstime,
+      </if>
+      <if test="reservebeginstime != null">
+        reservebeginstime,
+      </if>
+      <if test="socialsecuritypaymentbase != null">
+        socialsecuritypaymentbase,
+      </if>
+      <if test="reservepaymentbase != null">
+        reservepaymentbase,
+      </if>
+      <if test="annuitypaymentbase != null">
+        annuitypaymentbase,
+      </if>
+      <if test="paycurrency != null">
+        paycurrency,
+      </if>
+      <if test="paybank != null">
+        paybank,
+      </if>
+      <if test="createBy != null">
+        create_by,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="lastUpdateBy != null">
+        last_update_by,
+      </if>
+      <if test="lastUpdateTime != null">
+        last_update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="staffid != null">
+        #{staffid,jdbcType=BIGINT},
+      </if>
+      <if test="medicalsecuritynum != null">
+        #{medicalsecuritynum,jdbcType=VARCHAR},
+      </if>
+      <if test="socialsecuritynum != null">
+        #{socialsecuritynum,jdbcType=VARCHAR},
+      </if>
+      <if test="accumulationfundaccount != null">
+        #{accumulationfundaccount,jdbcType=VARCHAR},
+      </if>
+      <if test="socialsecurityorganizationrelationship != null">
+        #{socialsecurityorganizationrelationship,jdbcType=VARCHAR},
+      </if>
+      <if test="socialsecuritylevel != null">
+        #{socialsecuritylevel,jdbcType=VARCHAR},
+      </if>
+      <if test="paymenttype != null">
+        #{paymenttype,jdbcType=VARCHAR},
+      </if>
+      <if test="bankaccount != null">
+        #{bankaccount,jdbcType=VARCHAR},
+      </if>
+      <if test="salaryregion != null">
+        #{salaryregion,jdbcType=VARCHAR},
+      </if>
+      <if test="socialsecuritystartstime != null">
+        #{socialsecuritystartstime,jdbcType=DATE},
+      </if>
+      <if test="reservebeginstime != null">
+        #{reservebeginstime,jdbcType=DATE},
+      </if>
+      <if test="socialsecuritypaymentbase != null">
+        #{socialsecuritypaymentbase,jdbcType=DOUBLE},
+      </if>
+      <if test="reservepaymentbase != null">
+        #{reservepaymentbase,jdbcType=DOUBLE},
+      </if>
+      <if test="annuitypaymentbase != null">
+        #{annuitypaymentbase,jdbcType=DOUBLE},
+      </if>
+      <if test="paycurrency != null">
+        #{paycurrency,jdbcType=INTEGER},
+      </if>
+      <if test="paybank != null">
+        #{paybank,jdbcType=INTEGER},
+      </if>
+      <if test="createBy != null">
+        #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdateBy != null">
+        #{lastUpdateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="lastUpdateTime != null">
+        #{lastUpdateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+
+  <delete id="delete" parameterType="java.lang.Long">
+    delete from staff_payroll
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  
+  <update id="update" parameterType="edu.suep.smart.admin.model.StaffPayroll">
+    update staff_payroll
+    <set>
+      <if test="id != null">
+        id = #{id,jdbcType=BIGINT},
+      </if>
+      <if test="staffid != null">
+        staffid = #{staffid,jdbcType=BIGINT},
+      </if>
+      <if test="medicalsecuritynum != null">
+        medicalsecuritynum = #{medicalsecuritynum,jdbcType=VARCHAR},
+      </if>
+      <if test="socialsecuritynum != null">
+        socialsecuritynum = #{socialsecuritynum,jdbcType=VARCHAR},
+      </if>
+      <if test="accumulationfundaccount != null">
+        accumulationfundaccount = #{accumulationfundaccount,jdbcType=VARCHAR},
+      </if>
+      <if test="socialsecurityorganizationrelationship != null">
+        socialsecurityorganizationrelationship = #{socialsecurityorganizationrelationship,jdbcType=VARCHAR},
+      </if>
+      <if test="socialsecuritylevel != null">
+        socialsecuritylevel = #{socialsecuritylevel,jdbcType=VARCHAR},
+      </if>
+      <if test="paymenttype != null">
+        paymenttype = #{paymenttype,jdbcType=VARCHAR},
+      </if>
+      <if test="bankaccount != null">
+        bankaccount = #{bankaccount,jdbcType=VARCHAR},
+      </if>
+      <if test="salaryregion != null">
+        salaryregion = #{salaryregion,jdbcType=VARCHAR},
+      </if>
+      <if test="socialsecuritystartstime != null">
+        socialsecuritystartstime = #{socialsecuritystartstime,jdbcType=DATE},
+      </if>
+      <if test="reservebeginstime != null">
+        reservebeginstime = #{reservebeginstime,jdbcType=DATE},
+      </if>
+      <if test="socialsecuritypaymentbase != null">
+        socialsecuritypaymentbase = #{socialsecuritypaymentbase,jdbcType=DOUBLE},
+      </if>
+      <if test="reservepaymentbase != null">
+        reservepaymentbase = #{reservepaymentbase,jdbcType=DOUBLE},
+      </if>
+      <if test="annuitypaymentbase != null">
+        annuitypaymentbase = #{annuitypaymentbase,jdbcType=DOUBLE},
+      </if>
+      <if test="paycurrency != null">
+        paycurrency = #{paycurrency,jdbcType=INTEGER},
+      </if>
+      <if test="paybank != null">
+        paybank = #{paybank,jdbcType=INTEGER},
+      </if>
+      <if test="createBy != null">
+        create_by = #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdateBy != null">
+        last_update_by = #{lastUpdateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="lastUpdateTime != null">
+        last_update_time = #{lastUpdateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+  <select id="findById" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select * from staff_payroll
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  
+  <select id="findPage" resultMap="BaseResultMap">
+    select * from staff_payroll
+  </select>
+  
+</mapper>

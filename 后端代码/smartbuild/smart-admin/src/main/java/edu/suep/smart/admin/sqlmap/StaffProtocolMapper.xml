@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.suep.smart.admin.dao.StaffProtocolMapper">
+
+  <resultMap id="BaseResultMap" type="edu.suep.smart.admin.model.StaffProtocol">
+	<id column="id" jdbcType="BIGINT" property="id" />
+	<result column="staffid" jdbcType="BIGINT" property="staffid" />
+	<result column="type" jdbcType="VARCHAR" property="type" />
+	<result column="name" jdbcType="VARCHAR" property="name" />
+	<result column="signtype" jdbcType="VARCHAR" property="signtype" />
+	<result column="firstparty" jdbcType="VARCHAR" property="firstparty" />
+	<result column="paccessory" jdbcType="VARCHAR" property="paccessory" />
+	<result column="code" jdbcType="INTEGER" property="code" />
+	<result column="signdate" jdbcType="DATE" property="signdate" />
+	<result column="deadline" jdbcType="VARCHAR" property="deadline" />
+	<result column="pstartdate" jdbcType="DATE" property="pstartdate" />
+	<result column="penddate" jdbcType="DATE" property="penddate" />
+	<result column="terminaldate" jdbcType="DATE" property="terminaldate" />
+	<result column="create_by" jdbcType="VARCHAR" property="createBy" />
+	<result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+	<result column="last_update_by" jdbcType="VARCHAR" property="lastUpdateBy" />
+	<result column="last_update_time" jdbcType="TIMESTAMP" property="lastUpdateTime" />
+  </resultMap>
+  
+  <insert id="add" parameterType="edu.suep.smart.admin.model.StaffProtocol">
+    insert into staff_protocol
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="staffid != null">
+        staffid,
+      </if>
+      <if test="type != null">
+        type,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="signtype != null">
+        signtype,
+      </if>
+      <if test="firstparty != null">
+        firstparty,
+      </if>
+      <if test="paccessory != null">
+        paccessory,
+      </if>
+      <if test="code != null">
+        code,
+      </if>
+      <if test="signdate != null">
+        signdate,
+      </if>
+      <if test="deadline != null">
+        deadline,
+      </if>
+      <if test="pstartdate != null">
+        pstartdate,
+      </if>
+      <if test="penddate != null">
+        penddate,
+      </if>
+      <if test="terminaldate != null">
+        terminaldate,
+      </if>
+      <if test="createBy != null">
+        create_by,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="lastUpdateBy != null">
+        last_update_by,
+      </if>
+      <if test="lastUpdateTime != null">
+        last_update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="staffid != null">
+        #{staffid,jdbcType=BIGINT},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="signtype != null">
+        #{signtype,jdbcType=VARCHAR},
+      </if>
+      <if test="firstparty != null">
+        #{firstparty,jdbcType=VARCHAR},
+      </if>
+      <if test="paccessory != null">
+        #{paccessory,jdbcType=VARCHAR},
+      </if>
+      <if test="code != null">
+        #{code,jdbcType=INTEGER},
+      </if>
+      <if test="signdate != null">
+        #{signdate,jdbcType=DATE},
+      </if>
+      <if test="deadline != null">
+        #{deadline,jdbcType=VARCHAR},
+      </if>
+      <if test="pstartdate != null">
+        #{pstartdate,jdbcType=DATE},
+      </if>
+      <if test="penddate != null">
+        #{penddate,jdbcType=DATE},
+      </if>
+      <if test="terminaldate != null">
+        #{terminaldate,jdbcType=DATE},
+      </if>
+      <if test="createBy != null">
+        #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdateBy != null">
+        #{lastUpdateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="lastUpdateTime != null">
+        #{lastUpdateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+
+  <delete id="delete" parameterType="java.lang.Long">
+    delete from staff_protocol
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  
+  <update id="update" parameterType="edu.suep.smart.admin.model.StaffProtocol">
+    update staff_protocol
+    <set>
+      <if test="id != null">
+        id = #{id,jdbcType=BIGINT},
+      </if>
+      <if test="staffid != null">
+        staffid = #{staffid,jdbcType=BIGINT},
+      </if>
+      <if test="type != null">
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="signtype != null">
+        signtype = #{signtype,jdbcType=VARCHAR},
+      </if>
+      <if test="firstparty != null">
+        firstparty = #{firstparty,jdbcType=VARCHAR},
+      </if>
+      <if test="paccessory != null">
+        paccessory = #{paccessory,jdbcType=VARCHAR},
+      </if>
+      <if test="code != null">
+        code = #{code,jdbcType=INTEGER},
+      </if>
+      <if test="signdate != null">
+        signdate = #{signdate,jdbcType=DATE},
+      </if>
+      <if test="deadline != null">
+        deadline = #{deadline,jdbcType=VARCHAR},
+      </if>
+      <if test="pstartdate != null">
+        pstartdate = #{pstartdate,jdbcType=DATE},
+      </if>
+      <if test="penddate != null">
+        penddate = #{penddate,jdbcType=DATE},
+      </if>
+      <if test="terminaldate != null">
+        terminaldate = #{terminaldate,jdbcType=DATE},
+      </if>
+      <if test="createBy != null">
+        create_by = #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdateBy != null">
+        last_update_by = #{lastUpdateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="lastUpdateTime != null">
+        last_update_time = #{lastUpdateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+  <select id="findById" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select * from staff_protocol
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  
+  <select id="findPage" resultMap="BaseResultMap">
+    select * from staff_protocol
+  </select>
+  
+</mapper>

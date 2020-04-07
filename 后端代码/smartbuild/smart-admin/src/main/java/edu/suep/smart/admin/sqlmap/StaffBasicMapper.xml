@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.suep.smart.admin.dao.StaffBasicMapper">
+
+  <resultMap id="BaseResultMap" type="edu.suep.smart.admin.model.StaffBasic">
+	<id column="id" jdbcType="BIGINT" property="id" />
+	<result column="code" jdbcType="VARCHAR" property="code" />
+	<result column="name" jdbcType="VARCHAR" property="name" />
+	<result column="photo" jdbcType="VARCHAR" property="photo" />
+	<result column="gender" jdbcType="BIGINT" property="gender" />
+	<result column="nationality" jdbcType="BIGINT" property="nationality" />
+	<result column="nation" jdbcType="BIGINT" property="nation" />
+	<result column="politicstype" jdbcType="BIGINT" property="politicstype" />
+	<result column="idcardtype" jdbcType="BIGINT" property="idcardtype" />
+	<result column="idcardnum" jdbcType="VARCHAR" property="idcardnum" />
+	<result column="graduationschool" jdbcType="VARCHAR" property="graduationschool" />
+	<result column="highesteducation" jdbcType="INTEGER" property="highesteducation" />
+	<result column="major" jdbcType="VARCHAR" property="major" />
+	<result column="province" jdbcType="VARCHAR" property="province" />
+	<result column="city" jdbcType="VARCHAR" property="city" />
+	<result column="country" jdbcType="VARCHAR" property="country" />
+	<result column="village" jdbcType="VARCHAR" property="village" />
+	<result column="certificationlevel" jdbcType="INTEGER" property="certificationlevel" />
+	<result column="health" jdbcType="BIGINT" property="health" />
+	<result column="maritalstatus" jdbcType="BIGINT" property="maritalstatus" />
+	<result column="workerstatus" jdbcType="BIGINT" property="workerstatus" />
+	<result column="dept" jdbcType="BIGINT" property="dept" />
+	<result column="jobtype" jdbcType="BIGINT" property="jobtype" />
+	<result column="certificationtype" jdbcType="BIGINT" property="certificationtype" />
+	<result column="position" jdbcType="BIGINT" property="position" />
+	<result column="jobcategory" jdbcType="BIGINT" property="jobcategory" />
+	<result column="worktype" jdbcType="BIGINT" property="worktype" />
+	<result column="workunit" jdbcType="BIGINT" property="workunit" />
+	<result column="birthday" jdbcType="DATE" property="birthday" />
+	<result column="age" jdbcType="INTEGER" property="age" />
+	<result column="entry" jdbcType="DATE" property="entry" />
+	<result column="regularization" jdbcType="DATE" property="regularization" />
+	<result column="graduatation" jdbcType="DATE" property="graduatation" />
+	<result column="socialage" jdbcType="INTEGER" property="socialage" />
+	<result column="create_by" jdbcType="VARCHAR" property="createBy" />
+	<result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+	<result column="last_update_by" jdbcType="VARCHAR" property="lastUpdateBy" />
+	<result column="last_update_time" jdbcType="TIMESTAMP" property="lastUpdateTime" />
+  </resultMap>
+  
+  <insert id="add" parameterType="edu.suep.smart.admin.model.StaffBasic">
+    insert into staff_basic
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="code != null">
+        code,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="photo != null">
+        photo,
+      </if>
+      <if test="gender != null">
+        gender,
+      </if>
+      <if test="nationality != null">
+        nationality,
+      </if>
+      <if test="nation != null">
+        nation,
+      </if>
+      <if test="politicstype != null">
+        politicstype,
+      </if>
+      <if test="idcardtype != null">
+        idcardtype,
+      </if>
+      <if test="idcardnum != null">
+        idcardnum,
+      </if>
+      <if test="graduationschool != null">
+        graduationschool,
+      </if>
+      <if test="highesteducation != null">
+        highesteducation,
+      </if>
+      <if test="major != null">
+        major,
+      </if>
+      <if test="province != null">
+        province,
+      </if>
+      <if test="city != null">
+        city,
+      </if>
+      <if test="country != null">
+        country,
+      </if>
+      <if test="village != null">
+        village,
+      </if>
+      <if test="certificationlevel != null">
+        certificationlevel,
+      </if>
+      <if test="health != null">
+        health,
+      </if>
+      <if test="maritalstatus != null">
+        maritalstatus,
+      </if>
+      <if test="workerstatus != null">
+        workerstatus,
+      </if>
+      <if test="dept != null">
+        dept,
+      </if>
+      <if test="jobtype != null">
+        jobtype,
+      </if>
+      <if test="certificationtype != null">
+        certificationtype,
+      </if>
+      <if test="position != null">
+        position,
+      </if>
+      <if test="jobcategory != null">
+        jobcategory,
+      </if>
+      <if test="worktype != null">
+        worktype,
+      </if>
+      <if test="workunit != null">
+        workunit,
+      </if>
+      <if test="birthday != null">
+        birthday,
+      </if>
+      <if test="age != null">
+        age,
+      </if>
+      <if test="entry != null">
+        entry,
+      </if>
+      <if test="regularization != null">
+        regularization,
+      </if>
+      <if test="graduatation != null">
+        graduatation,
+      </if>
+      <if test="socialage != null">
+        socialage,
+      </if>
+      <if test="createBy != null">
+        create_by,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="lastUpdateBy != null">
+        last_update_by,
+      </if>
+      <if test="lastUpdateTime != null">
+        last_update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="code != null">
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="photo != null">
+        #{photo,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null">
+        #{gender,jdbcType=BIGINT},
+      </if>
+      <if test="nationality != null">
+        #{nationality,jdbcType=BIGINT},
+      </if>
+      <if test="nation != null">
+        #{nation,jdbcType=BIGINT},
+      </if>
+      <if test="politicstype != null">
+        #{politicstype,jdbcType=BIGINT},
+      </if>
+      <if test="idcardtype != null">
+        #{idcardtype,jdbcType=BIGINT},
+      </if>
+      <if test="idcardnum != null">
+        #{idcardnum,jdbcType=VARCHAR},
+      </if>
+      <if test="graduationschool != null">
+        #{graduationschool,jdbcType=VARCHAR},
+      </if>
+      <if test="highesteducation != null">
+        #{highesteducation,jdbcType=INTEGER},
+      </if>
+      <if test="major != null">
+        #{major,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null">
+        #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null">
+        #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="country != null">
+        #{country,jdbcType=VARCHAR},
+      </if>
+      <if test="village != null">
+        #{village,jdbcType=VARCHAR},
+      </if>
+      <if test="certificationlevel != null">
+        #{certificationlevel,jdbcType=INTEGER},
+      </if>
+      <if test="health != null">
+        #{health,jdbcType=BIGINT},
+      </if>
+      <if test="maritalstatus != null">
+        #{maritalstatus,jdbcType=BIGINT},
+      </if>
+      <if test="workerstatus != null">
+        #{workerstatus,jdbcType=BIGINT},
+      </if>
+      <if test="dept != null">
+        #{dept,jdbcType=BIGINT},
+      </if>
+      <if test="jobtype != null">
+        #{jobtype,jdbcType=BIGINT},
+      </if>
+      <if test="certificationtype != null">
+        #{certificationtype,jdbcType=BIGINT},
+      </if>
+      <if test="position != null">
+        #{position,jdbcType=BIGINT},
+      </if>
+      <if test="jobcategory != null">
+        #{jobcategory,jdbcType=BIGINT},
+      </if>
+      <if test="worktype != null">
+        #{worktype,jdbcType=BIGINT},
+      </if>
+      <if test="workunit != null">
+        #{workunit,jdbcType=BIGINT},
+      </if>
+      <if test="birthday != null">
+        #{birthday,jdbcType=DATE},
+      </if>
+      <if test="age != null">
+        #{age,jdbcType=INTEGER},
+      </if>
+      <if test="entry != null">
+        #{entry,jdbcType=DATE},
+      </if>
+      <if test="regularization != null">
+        #{regularization,jdbcType=DATE},
+      </if>
+      <if test="graduatation != null">
+        #{graduatation,jdbcType=DATE},
+      </if>
+      <if test="socialage != null">
+        #{socialage,jdbcType=INTEGER},
+      </if>
+      <if test="createBy != null">
+        #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdateBy != null">
+        #{lastUpdateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="lastUpdateTime != null">
+        #{lastUpdateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+
+  <delete id="delete" parameterType="java.lang.Long">
+    delete from staff_basic
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  
+  <update id="update" parameterType="edu.suep.smart.admin.model.StaffBasic">
+    update staff_basic
+    <set>
+      <if test="id != null">
+        id = #{id,jdbcType=BIGINT},
+      </if>
+      <if test="code != null">
+        code = #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="photo != null">
+        photo = #{photo,jdbcType=VARCHAR},
+      </if>
+      <if test="gender != null">
+        gender = #{gender,jdbcType=BIGINT},
+      </if>
+      <if test="nationality != null">
+        nationality = #{nationality,jdbcType=BIGINT},
+      </if>
+      <if test="nation != null">
+        nation = #{nation,jdbcType=BIGINT},
+      </if>
+      <if test="politicstype != null">
+        politicstype = #{politicstype,jdbcType=BIGINT},
+      </if>
+      <if test="idcardtype != null">
+        idcardtype = #{idcardtype,jdbcType=BIGINT},
+      </if>
+      <if test="idcardnum != null">
+        idcardnum = #{idcardnum,jdbcType=VARCHAR},
+      </if>
+      <if test="graduationschool != null">
+        graduationschool = #{graduationschool,jdbcType=VARCHAR},
+      </if>
+      <if test="highesteducation != null">
+        highesteducation = #{highesteducation,jdbcType=INTEGER},
+      </if>
+      <if test="major != null">
+        major = #{major,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null">
+        province = #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null">
+        city = #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="country != null">
+        country = #{country,jdbcType=VARCHAR},
+      </if>
+      <if test="village != null">
+        village = #{village,jdbcType=VARCHAR},
+      </if>
+      <if test="certificationlevel != null">
+        certificationlevel = #{certificationlevel,jdbcType=INTEGER},
+      </if>
+      <if test="health != null">
+        health = #{health,jdbcType=BIGINT},
+      </if>
+      <if test="maritalstatus != null">
+        maritalstatus = #{maritalstatus,jdbcType=BIGINT},
+      </if>
+      <if test="workerstatus != null">
+        workerstatus = #{workerstatus,jdbcType=BIGINT},
+      </if>
+      <if test="dept != null">
+        dept = #{dept,jdbcType=BIGINT},
+      </if>
+      <if test="jobtype != null">
+        jobtype = #{jobtype,jdbcType=BIGINT},
+      </if>
+      <if test="certificationtype != null">
+        certificationtype = #{certificationtype,jdbcType=BIGINT},
+      </if>
+      <if test="position != null">
+        position = #{position,jdbcType=BIGINT},
+      </if>
+      <if test="jobcategory != null">
+        jobcategory = #{jobcategory,jdbcType=BIGINT},
+      </if>
+      <if test="worktype != null">
+        worktype = #{worktype,jdbcType=BIGINT},
+      </if>
+      <if test="workunit != null">
+        workunit = #{workunit,jdbcType=BIGINT},
+      </if>
+      <if test="birthday != null">
+        birthday = #{birthday,jdbcType=DATE},
+      </if>
+      <if test="age != null">
+        age = #{age,jdbcType=INTEGER},
+      </if>
+      <if test="entry != null">
+        entry = #{entry,jdbcType=DATE},
+      </if>
+      <if test="regularization != null">
+        regularization = #{regularization,jdbcType=DATE},
+      </if>
+      <if test="graduatation != null">
+        graduatation = #{graduatation,jdbcType=DATE},
+      </if>
+      <if test="socialage != null">
+        socialage = #{socialage,jdbcType=INTEGER},
+      </if>
+      <if test="createBy != null">
+        create_by = #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdateBy != null">
+        last_update_by = #{lastUpdateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="lastUpdateTime != null">
+        last_update_time = #{lastUpdateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+  <select id="findById" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select * from staff_basic
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  
+  <select id="findPage" resultMap="BaseResultMap">
+    select * from staff_basic
+  </select>
+  
+</mapper>
