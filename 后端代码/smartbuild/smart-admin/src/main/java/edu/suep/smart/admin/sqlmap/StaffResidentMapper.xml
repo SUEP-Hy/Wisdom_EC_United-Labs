@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.suep.smart.admin.dao.StaffResidentMapper">
+
+  <resultMap id="BaseResultMap" type="edu.suep.smart.admin.model.StaffResident">
+	<id column="id" jdbcType="BIGINT" property="id" />
+	<result column="staffid" jdbcType="BIGINT" property="staffid" />
+	<result column="name" jdbcType="VARCHAR" property="name" />
+	<result column="matename" jdbcType="VARCHAR" property="matename" />
+	<result column="matehousetype" jdbcType="VARCHAR" property="matehousetype" />
+	<result column="childrenname" jdbcType="VARCHAR" property="childrenname" />
+	<result column="permanentresidence" jdbcType="VARCHAR" property="permanentresidence" />
+	<result column="immigrationaddr" jdbcType="VARCHAR" property="immigrationaddr" />
+	<result column="emigrationtaddr" jdbcType="VARCHAR" property="emigrationtaddr" />
+	<result column="currentaddr" jdbcType="VARCHAR" property="currentaddr" />
+	<result column="immigrationtime" jdbcType="DATE" property="immigrationtime" />
+	<result column="emigrationtime" jdbcType="DATE" property="emigrationtime" />
+	<result column="create_by" jdbcType="VARCHAR" property="createBy" />
+	<result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+	<result column="last_update_by" jdbcType="VARCHAR" property="lastUpdateBy" />
+	<result column="last_update_time" jdbcType="TIMESTAMP" property="lastUpdateTime" />
+  </resultMap>
+  
+  <insert id="add" parameterType="edu.suep.smart.admin.model.StaffResident">
+    insert into staff_resident
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="staffid != null">
+        staffid,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="matename != null">
+        matename,
+      </if>
+      <if test="matehousetype != null">
+        matehousetype,
+      </if>
+      <if test="childrenname != null">
+        childrenname,
+      </if>
+      <if test="permanentresidence != null">
+        permanentresidence,
+      </if>
+      <if test="immigrationaddr != null">
+        immigrationaddr,
+      </if>
+      <if test="emigrationtaddr != null">
+        emigrationtaddr,
+      </if>
+      <if test="currentaddr != null">
+        currentaddr,
+      </if>
+      <if test="immigrationtime != null">
+        immigrationtime,
+      </if>
+      <if test="emigrationtime != null">
+        emigrationtime,
+      </if>
+      <if test="createBy != null">
+        create_by,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="lastUpdateBy != null">
+        last_update_by,
+      </if>
+      <if test="lastUpdateTime != null">
+        last_update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="staffid != null">
+        #{staffid,jdbcType=BIGINT},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="matename != null">
+        #{matename,jdbcType=VARCHAR},
+      </if>
+      <if test="matehousetype != null">
+        #{matehousetype,jdbcType=VARCHAR},
+      </if>
+      <if test="childrenname != null">
+        #{childrenname,jdbcType=VARCHAR},
+      </if>
+      <if test="permanentresidence != null">
+        #{permanentresidence,jdbcType=VARCHAR},
+      </if>
+      <if test="immigrationaddr != null">
+        #{immigrationaddr,jdbcType=VARCHAR},
+      </if>
+      <if test="emigrationtaddr != null">
+        #{emigrationtaddr,jdbcType=VARCHAR},
+      </if>
+      <if test="currentaddr != null">
+        #{currentaddr,jdbcType=VARCHAR},
+      </if>
+      <if test="immigrationtime != null">
+        #{immigrationtime,jdbcType=DATE},
+      </if>
+      <if test="emigrationtime != null">
+        #{emigrationtime,jdbcType=DATE},
+      </if>
+      <if test="createBy != null">
+        #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdateBy != null">
+        #{lastUpdateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="lastUpdateTime != null">
+        #{lastUpdateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+
+  <delete id="delete" parameterType="java.lang.Long">
+    delete from staff_resident
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  
+  <update id="update" parameterType="edu.suep.smart.admin.model.StaffResident">
+    update staff_resident
+    <set>
+      <if test="id != null">
+        id = #{id,jdbcType=BIGINT},
+      </if>
+      <if test="staffid != null">
+        staffid = #{staffid,jdbcType=BIGINT},
+      </if>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="matename != null">
+        matename = #{matename,jdbcType=VARCHAR},
+      </if>
+      <if test="matehousetype != null">
+        matehousetype = #{matehousetype,jdbcType=VARCHAR},
+      </if>
+      <if test="childrenname != null">
+        childrenname = #{childrenname,jdbcType=VARCHAR},
+      </if>
+      <if test="permanentresidence != null">
+        permanentresidence = #{permanentresidence,jdbcType=VARCHAR},
+      </if>
+      <if test="immigrationaddr != null">
+        immigrationaddr = #{immigrationaddr,jdbcType=VARCHAR},
+      </if>
+      <if test="emigrationtaddr != null">
+        emigrationtaddr = #{emigrationtaddr,jdbcType=VARCHAR},
+      </if>
+      <if test="currentaddr != null">
+        currentaddr = #{currentaddr,jdbcType=VARCHAR},
+      </if>
+      <if test="immigrationtime != null">
+        immigrationtime = #{immigrationtime,jdbcType=DATE},
+      </if>
+      <if test="emigrationtime != null">
+        emigrationtime = #{emigrationtime,jdbcType=DATE},
+      </if>
+      <if test="createBy != null">
+        create_by = #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lastUpdateBy != null">
+        last_update_by = #{lastUpdateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="lastUpdateTime != null">
+        last_update_time = #{lastUpdateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+  <select id="findById" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select * from staff_resident
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  
+  <select id="findPage" resultMap="BaseResultMap">
+    select * from staff_resident
+  </select>
+  
+</mapper>

@@ -1,0 +1,25 @@
+server:
+  port: 8020
+spring:
+  application:
+    name: smart-config
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        serviceName: ${spring.application.name}	# 注册到consul的服务名称
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+# 开放健康检查接口
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
